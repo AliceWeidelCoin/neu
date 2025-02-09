@@ -3,89 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replizierte Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Krypto-Coin Bewerbung</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header mit Logos */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 1rem; /* Größere Höhe des Headers */
+            background-color: rgba(255, 255, 255, 0.9); /* Halbtransparenter weißer Hintergrund */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000; /* Sicherstellen, dass der Header über dem Hintergrundbild bleibt */
+        }
+        .header-left-logo img {
+            width: 120px; /* Größeres erstes Logo */
+        }
+        .header-center-logo img {
+            width: 180px; /* Größeres zweites Logo */
+            margin: 0 auto;
+        }
+
+        /* Erste Seite (Startseite) */
+        .home {
+            background-image: url('backround.jpg'); /* Platzhalter-Bild */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dunkler Overlay für bessere Lesbarkeit */
+            z-index: -1; /* Hinter dem Text und den Logos */
+        }
+        .home h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1; /* Über dem Overlay */
+            position: relative;
+        }
+        .home img {
+            width: 180px; /* Größeres Coin-Logo */
+            margin-top: 20px;
+            z-index: 1; /* Über dem Overlay */
+            position: relative;
+        }
+
+        /* Zweite Seite (Informationen) */
+        .info {
+            padding: 4rem 2rem; /* Mehr Abstand zur Startseite */
+            text-align: center;
+            background-color: #f4f4f4; /* Hellgrauer Hintergrund */
+        }
+        .info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .info p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffffff; /* Weißer Hintergrund */
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .hero h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Call-to-Action Buttons */
+        .cta-buttons {
+            margin-top: 2rem;
+        }
+        .cta-buttons button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            margin: 0 0.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-buttons button:nth-child(1) {
+            background-color: #3b82f6; /* Blau */
+            color: white;
+        }
+        .cta-buttons button:nth-child(2) {
+            background-color: #10b981; /*Grün */
+            color: white;
+        }
+        .cta-buttons button:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Header mit Logos -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Startseite</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
+        <div class="header-left-logo">
+            <img src="logo.jpg"> <!-- Platzhalter für das erste Logo -->
+        </div>
+        <div class="header-center-logo">
+            <img src="coin500x500"> <!-- Platzhalter für das zweite Logo -->
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="overlay">
-            <h1>Willkommen auf unserer Website</h1>
-            <p>Hier präsentieren wir unsere Vision für die Zukunft.</p>
-        </div>
+    <!-- Erste Seite (Startseite) -->
+    <section class="home">
+        <h1>Willkommen bei CryptoCoin</h1>
+        <img src="https://via.placeholder.com/180" alt="CryptoCoin Logo"> <!-- Platzhalter für das Coin-Logo -->
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Unsere Features</h2>
-        <div class="feature-list">
-            <div class="feature">
-                <img src="feature1-icon.png" alt="Feature 1 Icon" class="feature-icon">
-                <h3>1% Transaktionsgebühren</h3>
-                <p>Für Wahlkampfspenden und Airdrops.</p>
-            </div>
-            <div class="feature">
-                <img src="feature2-icon.png" alt="Feature 2 Icon" class="feature-icon">
-                <h3>Sicherheit durch Blockchain</h3>
-                <p>Alle Transaktionen sind transparent und sicher.</p>
-            </div>
-            <div class="feature">
-                <img src="feature3-icon.png" alt="Feature 3 Icon" class="feature-icon">
-                <h3>Globale Reichweite</h3>
-                <p>Unsere Plattform ist weltweit verfügbar.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Zweite Seite (Informationen) -->
+    <section class="info">
+        <h2>Über CryptoCoin</h2>
+        <p>CryptoCoin ist die Zukunft der digitalen Währungen. Mit seiner innovativen Technologie und der Integration von Solana bietet CryptoCoin Sicherheit, Geschwindigkeit und Transparenz.</p>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Über uns</h2>
-                <p>Wir sind ein innovatives Unternehmen mit einem klaren Ziel: Eine bessere Zukunft für alle.</p>
-                <a href="#contact" class="button">Mehr erfahren</a>
-            </div>
-            <div class="about-image">
-                <img src="about-image.jpg" alt="Über uns Bild">
-            </div>
+        <!-- Hero Section -->
+        <div class="hero">
+            <h3>Kaufe CryptoCoin heute!</h3>
+            <p>Mit Solana kannst du CryptoCoin bequem und schnell kaufen. Nutze unsere sichere Plattform und tritt der Community bei.</p>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Kontakt</h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="E-Mail" required>
-            <textarea placeholder="Nachricht" required></textarea>
-            <button type="submit" class="button">Senden</button>
-        </form>
+        <!-- Call-to-Action Buttons -->
+        <div class="cta-buttons">
+            <button onclick="window.location.href='#'">Mehr erfahren</button>
+            <button onclick="window.location.href='#'">Jetzt kaufen</button>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Deine Firma. Alle Rechte vorbehalten.</p>
-        </div>
+        <p>&copy; 2023 CryptoCoin. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
